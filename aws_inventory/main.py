@@ -1,6 +1,7 @@
 import boto3
 from botocore.exceptions import BotoCoreError, ClientError
 
+from .iam import get_iam_users
 
 def get_identity(sts_client):
     return sts_client.get_caller_identity()
